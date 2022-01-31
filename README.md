@@ -1,3 +1,35 @@
+#After clone
+
+Goto folder code clone in terminal
+
+git submodule init
+
+git submodule update
+
+cp .env.example .env
+
+cp .env.example.laradock ./laradock/.env
+
+cd laradock
+
+docker-compose up -d apache2 mariadb workspace
+
+docker-compose exec --user=laradock workspace bash
+
+composer install
+
+php artisan key:generate
+
+npm install
+
+npm run dev
+
+
+
+### -------------------------------------------------------------------
+
+
+
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
